@@ -1,4 +1,5 @@
 
+import os
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
 import random
@@ -6,7 +7,7 @@ import logging
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-TOKEN = '7740253808:AAH4HzMrAMAtR8ig8ZwXaU1RaJxROAXHVdw'
+TOKEN = os.getenv('BOT_TOKEN')
 
 def start(update, context):
     keyboard = [['Получить ссылку 📎']]
